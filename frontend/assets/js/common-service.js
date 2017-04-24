@@ -6,7 +6,16 @@ app.service("COMMON_SERVICE", [function() {
     this.USER_META = {};
 
     this.DATA_LIST = [
-        { "name": "Abcd", "age": 11 }
+        { "name": "Abcd", "age": 11 },
+        { "name": "Abcd", "age": 11 },
+        { "name": "Abcd", "age": 11 },
+        { "name": "Abcd", "age": 11 },
+        { "name": "Abcd", "age": 11 },
+        { "name": "Abcd", "age": 11 },
+        { "name": "Abcd", "age": 11 },
+        { "name": "Abcd", "age": 11 },
+        { "name": "Abcd", "age": 11 },
+        { "name": "Abcd", "age": 11 },
     ];
 
 }]);

@@ -1,25 +1,26 @@
 {
-    "name": "frontend",
-    "authors": [
-        "santosh <santosh.ece06@gmail.com>"
-    ],
-    "description": "",
-    "main": "",
-    "license": "MIT",
-    "homepage": "",
-    "ignore": [
-        "**/.*",
-        "node_modules",
-        "bower_components",
-        "test",
-        "tests"
-    ],
-    "dependencies": {
-        "angular": "^1.6.4",
-        "jquery": "^3.2.1",
-        "angular-material": "^1.1.4",
-        "angular-ui-router": "^0.4.2",
-        "angular-material-icons": "^0.7.1",
-        "ng-table": "1.0.0"
-    }
+  "name": "frontend",
+  "authors": [
+    "santosh <santosh.ece06@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.4",
+    "jquery": "^3.2.1",
+    "angular-material": "^1.1.4",
+    "angular-ui-router": "^0.4.2",
+    "angular-material-icons": "^0.7.1",
+    "ng-table": "1.0.0",
+    "bootstrap": "^3.3.7"
+  }
 }
