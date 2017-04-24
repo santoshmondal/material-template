@@ -1,19 +1,51 @@
-<md-content>
-    <md-toolbar class="md-hue-2">
-        <div class="md-toolbar-tools">
-            <md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
-                <md-icon md-svg-icon="menu"></md-icon>
-            </md-button>
+<div>
 
-            <h2 flex md-truncate>Celltick Dashboard</h2>
+    <md-content>
+        <md-toolbar class="md-hue-2">
+            <div class="md-toolbar-tools">
+                <md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
+                    <md-icon md-svg-icon="menu"></md-icon>
+                </md-button>
 
-            <md-button class="md-icon-button" aria-label="Favorite">
-                <md-icon md-svg-icon="favorite" style="color: greenyellow;"></md-icon>
-            </md-button>
+                <h2 flex md-truncate>Celltick Dashboard</h2>
 
-            <md-button class="md-icon-button" aria-label="More">
-                <md-icon md-svg-icon="more_vert"></md-icon>
-            </md-button>
+            </div>
+        </md-toolbar>
+    </md-content>
+
+
+    <div layout="row">
+        <div layout="column" flex="55">
         </div>
-    </md-toolbar>
-</md-content>
+
+        <div layout="column" flex="40" class="login">
+            <div layout="row">
+                <div layout="column" flex layout-padding ng-cloak>
+                    <md-content class="md-no-momentum">
+                        <md-input-container class="md-icon-float md-block">
+                            <!-- Use floating label instead of placeholder -->
+                            <label>Name</label>
+                            <md-icon md-svg-src="account" class="name"></md-icon>
+                            <input ng-model="user.name" type="text">
+                        </md-input-container>
+
+                        <md-input-container class="md-icon-float md-block">
+                            <md-icon md-svg-src="lock"></md-icon>
+                            <input ng-model="user.phone" type="password" placeholder="Password">
+                        </md-input-container>
+
+                        <section layout="row" layout-sm="column" layout-align="end center" layout-wrap>
+                            <md-button class="md-raised md-primary" layout-align="center end">Login</md-button>
+                        </section>
+
+                    </md-content>
+                </div>
+            </div>
+        </div>
+
+        <div layout="column" flex="5">
+        </div>
+
+    </div>
+
+</div>

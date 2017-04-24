@@ -1,5 +1,16 @@
 var app = angular.module("app", ['ngMaterial', 'ui.router', 'ngMdIcons']);
 
+
+app.config(function($mdThemingProvider) {
+    $mdThemingProvider
+        .theme('default')
+        .primaryPalette('indigo')
+        .accentPalette('pink')
+        .warnPalette('red')
+        .backgroundPalette('blue-grey');
+});
+
+
 app.config(['$mdIconProvider', function($mdIconProvider) {
     // SVG Icon
     $mdIconProvider
