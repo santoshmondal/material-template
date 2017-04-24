@@ -7,6 +7,8 @@ app.controller("homeCtrl", ["$scope", "NgTableParams", "COMMON_SERVICE", functio
             "counts": [5, 10, 15, 20],
             "dataset": COMMON_SERVICE.getDataList()
         });
+
+        $scope.providerList = COMMON_SERVICE.getTelecomProviderList();
     };
 
 

@@ -18,9 +18,15 @@
 <div ng-if="LOGGED_IN">
 
     <div layout="row" layout-padding ng-cloak>
-        <div layout="column" flex="10"></div>
+        <div layout="column" flex="10">
+            <div ng-repeat="item in providerList">
+                <md-button class="md-primary md-raised md-mini" aria-label="'item.name'" style="width:100%">
+                    {{item.name}}
+                </md-button>
+            </div>
+        </div>
 
-        <div layout="column" flex="80">
+        <div layout="column" flex="90">
             <table ng-table="dataList" class="table table-condensed table-bordered table-striped">
                 <tr ng-repeat="row in $data">
                     <td data-title="'Provider'" sortable="'provider'" filter="{'provider.name': 'text'}">{{row.provider.name}}</td>

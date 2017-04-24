@@ -6,9 +6,8 @@ app.service("COMMON_SERVICE", [function() {
 
 
     // SIMULATION DATA VARIABLE
-    var telecomProviderList = ["Airtel", "Vodafone", "R-COM", "Rilance JIO", "Aircel", "Idea"];
     var telecomProviderList = [
-        { "id": 1, "name": "Airtel", "icon": "icon.png" },
+        { "id": 1, "name": "Airtel", "icon": "img/vodafone-128.png" },
         { "id": 2, "name": "Vodafone", "icon": "icon.png" },
         { "id": 3, "name": "R-COM", "icon": "icon.png" },
         { "id": 4, "name": "Rilance JIO", "icon": "icon.png" },
@@ -19,6 +18,10 @@ app.service("COMMON_SERVICE", [function() {
     var activeStatus = ["true", "false"];
     var simtypeList = ["CDMA", "GSM"];
     var circleList = ["MUMBAI", "Kolkata", "Chennai", "Delhi", "Pune", "Hyderabad", "Banglore"];
+
+    this.getTelecomProviderList = function() {
+        return telecomProviderList;
+    }
 
     this.DATA_LIST = [];
     this.getDataList = function() {
