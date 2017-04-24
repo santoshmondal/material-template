@@ -1,6 +1,11 @@
 var app = angular.module("app", ['ngMaterial', 'ui.router', 'ngMdIcons']);
 
+app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.otherwise('/home');
 
-app.controller("first", ["$scope", function($scope) {
-    $scope.hello = "Hello World";
+    $stateProvider.state('home', {
+        url: '/home',
+        templateUrl: 'views/home.html',
+        controller: 'homeCtrl'
+    });
 }]);
