@@ -3,8 +3,8 @@ var app = angular.module("app");
 app.controller("homeCtrl", ["$scope", "NgTableParams", "COMMON_SERVICE", function($scope, NgTableParams, COMMON_SERVICE) {
 
     $scope.getData = function() {
-        $scope.dataList = new NgTableParams({ "count": 20 }, {
-            "counts": [5, 10, 20],
+        $scope.dataList = new NgTableParams({ "count": 15 }, {
+            "counts": [5, 10, 15, 20],
             "dataset": COMMON_SERVICE.DATA_LIST
         });
     };
