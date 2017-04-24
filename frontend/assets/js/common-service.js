@@ -19,10 +19,10 @@ app.service("COMMON_SERVICE", [function() {
                 "provider": telecomProviderList[Math.floor(Math.random() * 6)],
                 "msidn": this.randomMsidn(),
                 "circle": circleList[Math.floor(Math.random() * 7)],
-                "simtype": activeStatus[Math.floor(Math.random() * 2)],
+                "simtype": simtypeList[Math.floor(Math.random() * 2)],
                 "activeStatus": activeStatus[Math.floor(Math.random() * 2)],
                 "handset": handsetList[Math.floor(Math.random() * 6)],
-                "ctime": new Date()
+                "ctime": this.randomDate()
             };
 
             this.DATA_LIST.push(iobj);
@@ -36,6 +36,12 @@ app.service("COMMON_SERVICE", [function() {
             Math.floor(Math.random() * 9) + Math.floor(Math.random() * 9) + Math.floor(Math.random() * 9) + Math.floor(Math.random() * 9) +
             Math.floor(Math.random() * 9) + Math.floor(Math.random() * 9) + Math.floor(Math.random() * 9) + "";
         return msidn;
+    };
+
+    this.randomDate = function() {
+        var cdate = new Date();
+        cdate.setDate(cdate.getDate() - Math.floor(Math.random() * 7));
+        return cdate;
     }
 
 }]);

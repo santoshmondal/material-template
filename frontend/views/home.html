@@ -24,7 +24,12 @@
             <table ng-table="dataList" class="table table-condensed table-bordered table-striped">
                 <tr ng-repeat="row in $data">
                     <td data-title="'Provider'" sortable="'provider'" filter="{provider: 'text'}">{{row.provider}}</td>
-                    <td data-title="'Age'" sortable="'age'" filter="{age: 'number'}">{{row.age}}</td>
+                    <td data-title="'Circle'" sortable="'circle'" filter="{provider: 'text'}">{{row.circle}}</td>
+                    <td data-title="'Simtype'" sortable="'simtype'" filter="{provider: 'text'}">{{row.simtype}}</td>
+                    <td data-title="'Handset'" sortable="'handset'" filter="{provider: 'text'}">{{row.handset}}</td>
+                    <td data-title="'MSIDN'" sortable="'msidn'" filter="{provider: 'text'}">{{row.msidn}}</td>
+                    <td data-title="'ActiveStatus'" sortable="'activeStatus'" filter="{provider: 'text'}">{{row.activeStatus}}</td>
+                    <td data-title="'TimeStamp'" sortable="'ctime'" filter="{ctime: 'text'}">{{row.ctime | date : short}}</td>
                 </tr>
             </table>
         </div>
