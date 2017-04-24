@@ -16,5 +16,11 @@
 </div>
 
 <div ng-if="LOGGED_IN">
-    HOME PAGE {{hello}}
+
+    <table ng-table="dataList" class="table table-condensed table-bordered table-striped">
+        <tr ng-repeat="row in $data">
+            <td data-title="'Name'">{{row.name}}</td>
+            <td data-title="'Age'">{{row.age}}</td>
+        </tr>
+    </table>
 </div>

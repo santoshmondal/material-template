@@ -1,5 +1,4 @@
-var app = angular.module("app", ['ngMaterial', 'ui.router', 'ngMdIcons']);
-
+var app = angular.module("app", ['ngMaterial', 'ui.router', 'ngMdIcons', 'ngTable']);
 
 app.config(function($mdThemingProvider) {
     $mdThemingProvider

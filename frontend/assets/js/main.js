@@ -1,6 +1,11 @@
 var app = angular.module("app");
 
-app.controller("homeCtrl", ["$scope", "COMMON_SERVICE", function($scope, COMMON_SERVICE) {
+app.controller("homeCtrl", ["$scope", "NgTableParams", "COMMON_SERVICE", function($scope, NgTableParams, COMMON_SERVICE) {
+
+    $scope.getData = function() {
+        $scope.dataList = new NgTableParams({ "count": 5 }, { "counts": [5, 10, 20], "dataset": [] });
+    };
+
 
     $scope.user = {};
     $scope.authLogin = function() {
@@ -14,6 +19,8 @@ app.controller("homeCtrl", ["$scope", "COMMON_SERVICE", function($scope, COMMON_
             localStorage.setItem('USER_META', JSON.stringify(user));
 
             $scope.LOGGED_IN = true;
+
+            $scope.getData();
         } else {
             user.errorMessage = "Authentication Fails";
         }
@@ -30,6 +37,8 @@ app.controller("homeCtrl", ["$scope", "COMMON_SERVICE", function($scope, COMMON_
             $scope.LOGGED_IN = true;
 
             COMMON_SERVICE.USER_META = userMetaObj;
+
+            $scope.getData();
         } else {
             $scope.LOGGED_IN = false;
         }
