@@ -1,1 +1,7 @@
-HOME PAGE {{hello}}
+<div ng-if="!LOGGED_IN">
+    <div ng-include="'views/login.html'"></div>
+</div>
+
+<div ng-if="LOGGED_IN">
+    HOME PAGE {{hello}}
+</div>
