@@ -17,10 +17,17 @@
 
 <div ng-if="LOGGED_IN">
 
-    <table ng-table="dataList" class="table table-condensed table-bordered table-striped">
-        <tr ng-repeat="row in $data">
-            <td data-title="'Name'">{{row.name}}</td>
-            <td data-title="'Age'">{{row.age}}</td>
-        </tr>
-    </table>
+    <div layout="row">
+        <div layout="column" flex="10"></div>
+
+        <div layout="column" flex="80">
+            <table ng-table="dataList" class="table table-condensed table-bordered table-striped">
+                <tr ng-repeat="row in $data">
+                    <td data-title="'Name'">{{row.name}}</td>
+                    <td data-title="'Age'">{{row.age}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
 </div>
