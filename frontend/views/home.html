@@ -18,24 +18,27 @@
 <div ng-if="LOGGED_IN">
 
     <div layout="row" layout-padding ng-cloak>
-        <div layout="column" flex="10">
+        <div layout="column" flex="10" style="background: #607D8B;">
             <div ng-repeat="item in providerList">
-                <md-button class="md-primary md-raised md-mini" aria-label="'item.name'" style="width:100%">
-                    {{item.name}}
-                </md-button>
+                <section layout="row" layout-sm="column" layout-align="end center" layout-wrap>
+                    <md-button class="md-primary md-raised md-mini" aria-label="'item.name'" style="width:100%">
+                        {{item.name}}
+                    </md-button>
+                </section>
             </div>
         </div>
+
 
         <div layout="column" flex="90">
             <table ng-table="dataList" class="table table-condensed table-bordered table-striped">
                 <tr ng-repeat="row in $data">
                     <td data-title="'Provider'" sortable="'provider'" filter="{'provider.name': 'text'}">{{row.provider.name}}</td>
-                    <td data-title="'Circle'" sortable="'circle'" filter="{provider: 'text'}">{{row.circle}}</td>
-                    <td data-title="'Simtype'" sortable="'simtype'" filter="{provider: 'text'}">{{row.simtype}}</td>
-                    <td data-title="'Handset'" sortable="'handset'" filter="{provider: 'text'}">{{row.handset}}</td>
-                    <td data-title="'MSIDN'" sortable="'msidn'" filter="{provider: 'text'}">{{row.msidn}}</td>
-                    <td data-title="'ActiveStatus'" sortable="'activeStatus'" filter="{provider: 'text'}">{{row.activeStatus}}</td>
-                    <td data-title="'TimeStamp'" sortable="'ctime'" filter="{ctime: 'text'}">{{row.ctime | date : short}}</td>
+                    <td data-title="'Circle'" sortable="'circle'" filter="{'circle': 'text'}">{{row.circle}}</td>
+                    <td data-title="'Simtype'" sortable="'simtype'" filter="{'simtype': 'text'}">{{row.simtype}}</td>
+                    <td data-title="'Handset'" sortable="'handset'" filter="{'handset': 'text'}">{{row.handset}}</td>
+                    <td data-title="'MSIDN'" sortable="'msidn'" filter="{'msidn': 'text'}">{{row.msidn}}</td>
+                    <td data-title="'ActiveStatus'" sortable="'activeStatus'" filter="{'activeStatus': 'text'}">{{row.activeStatus}}</td>
+                    <td data-title="'TimeStamp'" sortable="'ctime'" filter="{'ctime': 'text'}">{{row.ctime | date : short}}</td>
                 </tr>
             </table>
         </div>
