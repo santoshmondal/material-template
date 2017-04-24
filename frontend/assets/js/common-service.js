@@ -7,6 +7,14 @@ app.service("COMMON_SERVICE", [function() {
 
     // SIMULATION DATA VARIABLE
     var telecomProviderList = ["Airtel", "Vodafone", "R-COM", "Rilance JIO", "Aircel", "Idea"];
+    var telecomProviderList = [
+        { "id": 1, "name": "Airtel", "icon": "icon.png" },
+        { "id": 2, "name": "Vodafone", "icon": "icon.png" },
+        { "id": 3, "name": "R-COM", "icon": "icon.png" },
+        { "id": 4, "name": "Rilance JIO", "icon": "icon.png" },
+        { "id": 5, "name": "Aircel", "icon": "icon.png" },
+        { "id": 6, "name": "Idea", "icon": "icon.png" }
+    ];
     var handsetList = ["Apple", "Samsung", "MI", "Lenovo", "1+", "Motorola"];
     var activeStatus = ["true", "false"];
     var simtypeList = ["CDMA", "GSM"];
