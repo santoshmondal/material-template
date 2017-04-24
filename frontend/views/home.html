@@ -5,7 +5,7 @@
                 <md-icon md-svg-icon="menu"></md-icon>
             </md-button>
 
-            <h2 flex md-truncate>Celltick Dashboard</h2>
+            <h2 class="my-brand" flex md-truncate>Celltick Dashboard</h2>
 
         </div>
     </md-toolbar>
@@ -23,7 +23,7 @@
         <div layout="column" flex="80">
             <table ng-table="dataList" class="table table-condensed table-bordered table-striped">
                 <tr ng-repeat="row in $data">
-                    <td data-title="'Name'" sortable="'name'" filter="{name: 'text'}">{{row.name}}</td>
+                    <td data-title="'Provider'" sortable="'provider'" filter="{provider: 'text'}">{{row.provider}}</td>
                     <td data-title="'Age'" sortable="'age'" filter="{age: 'number'}">{{row.age}}</td>
                 </tr>
             </table>

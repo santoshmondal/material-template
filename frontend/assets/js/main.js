@@ -5,7 +5,7 @@ app.controller("homeCtrl", ["$scope", "NgTableParams", "COMMON_SERVICE", functio
     $scope.getData = function() {
         $scope.dataList = new NgTableParams({ "count": 15 }, {
             "counts": [5, 10, 15, 20],
-            "dataset": COMMON_SERVICE.DATA_LIST
+            "dataset": COMMON_SERVICE.getDataList()
         });
     };
 

@@ -5,3 +5,8 @@ div.login {
     padding: 5px;
     border-radius: 3px;
 }
+
+.my-brand {
+    font-weight: bold;
+    text-shadow: 0 0 10px aquamarine;
+}
