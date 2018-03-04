@@ -1,3 +1,4 @@
+// celltick
 var app = angular.module("app");
 
 app.controller("homeCtrl", ["$scope", "NgTableParams", "COMMON_SERVICE", function($scope, NgTableParams, COMMON_SERVICE) {
