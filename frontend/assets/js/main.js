@@ -2,6 +2,7 @@
 var app = angular.module("app");
 
 app.controller("homeCtrl", ["$scope", "NgTableParams", "COMMON_SERVICE", function($scope, NgTableParams, COMMON_SERVICE) {
+    console.log("HOMEE");
 
     $scope.getData = function() {
         $scope.dataList = new NgTableParams({ "count": 15 }, {
